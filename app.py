@@ -1,5 +1,6 @@
 import streamlit as st
-x=st.number_input("Please enter out marks with main scheme"value=None,)
+
+number = st.number_input("Insert a number", value=None)
 
 
 
