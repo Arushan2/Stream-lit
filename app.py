@@ -9,7 +9,7 @@ def calculate(sub_scheme, main_scheme, student_marks):
         return mainmarks
     else:
         return 0
-all_inputs_provided = x > 0 and y > 0 and name and stmarks >= 0
+# all_inputs_provided = x > 0 and y > 0 and name and stmarks >= 0
 if st.button('Calculate Marks'):
     calculated_marks = calculate(x, y, stmarks)
     st.write(f"{name}'s calculated marks: {calculated_marks}")
