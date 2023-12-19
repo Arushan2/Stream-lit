@@ -5,8 +5,8 @@ import pandas as pd
 if 'results_df' not in st.session_state:
     st.session_state.results_df = pd.DataFrame(columns=['Name', 'Calculated Marks'])
 
-x = st.number_input("Insert total marks as your sub scheme", value=0)
-y = st.number_input("Insert total marks as your main scheme", value=0)
+x = st.number_input("Insert total marks as your sub scheme", value=None)
+y = st.number_input("Insert total marks as your main scheme", value=None)
 
 # Use session state to store and update the name and student marks
 if 'name' not in st.session_state:
