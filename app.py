@@ -1,10 +1,10 @@
 import streamlit as st
 import pandas as pd
 
-x = st.number_input("Insert total marks as your sub scheme", value=None)
-y = st.number_input("Insert total marks as your main scheme", value=None)
+x = st.number_input("Insert total marks as your sub scheme", value=0)
+y = st.number_input("Insert total marks as your main scheme", value=0)
 name = st.text_input("Enter your Name")
-stmarks = st.number_input("Insert student's marks", value=None)
+stmarks = st.number_input("Insert student's marks", value=0)
 
 # DataFrame to store the results
 results_df = pd.DataFrame(columns=['Name', 'Calculated Marks'])
@@ -25,6 +25,14 @@ if st.button('Calculate Marks'):
     st.write(results_df)
 else:
     st.write("Enter the details and press 'Calculate Marks' to see the result.")
+
+# Function to convert DataFrame to JSON for download
+def convert_df_to_json(df):
+    return df.to_json(orient='records').encode('utf-8')
+
+# Download button for the table as JSON
+json_data = convert_df_to_json(results_df)
+st.download_button(label="Download Results as JSON", data=json_data, file_name='calculated_marks.json', mime='application/json')
 
 # Function to convert DataFrame to CSV for download
 def convert_df_to_csv(df):
