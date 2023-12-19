@@ -7,15 +7,8 @@ if 'results_df' not in st.session_state:
 
 x = st.number_input("Insert total marks as your sub scheme", value=0)
 y = st.number_input("Insert total marks as your main scheme", value=0)
-
-# Use session state to store and update the name and student marks
-if 'name' not in st.session_state:
-    st.session_state.name = ""
-if 'student_marks' not in st.session_state:
-    st.session_state.student_marks = 0
-
-name = st.text_input("Enter your Name", value=st.session_state.name)
-stmarks = st.number_input("Insert student's marks", value=st.session_state.student_marks)
+name = st.text_input("Enter your Name")
+stmarks = st.number_input("Insert student's marks", value=0)
 
 def calculate(sub_scheme, main_scheme, student_marks):
     if sub_scheme != 0: 
