@@ -34,7 +34,7 @@ if st.button('Calculate Marks'):
 
     # Clear the name and student marks fields after calculation
     st.session_state.name = ""
-    st.session_state.student_marks = 0
+    st.session_state.student_marks = None
 
     # Rerun the app to reflect changes
     st.experimental_rerun()
