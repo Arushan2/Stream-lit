@@ -5,10 +5,8 @@ if 'results_df' not in st.session_state:
     st.session_state.results_df = pd.DataFrame(columns=['Name', 'Calculated Marks'])
 
 x = st.number_input("Insert total marks as your sub scheme", value=None)
-y = st.number_input("Insert total marks as your main scheme", value=0)
 y = st.number_input("Insert total marks as your main scheme", value=None)
 name = st.text_input("Enter your Name")
-stmarks = st.number_input("Insert student's marks", value=0)
 stmarks = st.number_input("Insert student's marks", value=None)
 
 def calculate(sub_scheme, main_scheme, student_marks):
