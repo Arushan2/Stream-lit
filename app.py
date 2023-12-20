@@ -12,7 +12,7 @@ y = st.number_input("Insert total marks as your main scheme", value=None)
 if 'name' not in st.session_state:
     st.session_state.name = ""
 if 'student_marks' not in st.session_state:
-    st.session_state.student_marks = 0
+    st.session_state.student_marks = None
 
 name = st.text_input("Enter your Name", value=st.session_state.name)
 stmarks = st.number_input("Insert student's marks", value=st.session_state.student_marks)
